@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sizzler Restaurant</title>
+    <link rel="icon" href="images/sizzler-logo.png">
+    
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <!-- AOS Animation -->
+
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+            /* Loading Screen Styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loading-container {
+            text-align: center;
+        }
+
+        h2{
+            font-size: 40px;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal
+        }
+
+        .loading-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: transparent;
+            background: linear-gradient(to top, #c9a96e 0%, #c9a96e 50%, rgba(255, 255, 255, 0.2) 50%);
+            background-size: 100% 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            position: relative;
+            animation: fillText 5s ease-in-out forwards;
+            letter-spacing: 2px;
+        }
+
+        @keyframes fillText {
+            0% {
+                background-position: 0% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+    /* Main Website Styles */
+        .website-content {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-in 5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+
+header{
+    max-width: 100%;
+    height: 90px;
+
+}
+
+nav ul li::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  margin-top: -5px;
+  background: #E0562A;
+background: linear-gradient(90deg,rgba(224, 86, 42, 1) 0%, rgba(244, 171, 41, 1) 100%);
+  transition: width ease .2s;
+}
+
+nav ul li:hover::after {
+ width:100%;
+}
+
+    body {
+      background: #000;
+      color: white;
+      font-family: "Poppins", sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ===== Hero Section ===== */
+    .custom-btn .box{
+    width: 145px;
+    height: 45px;
+    outline: 3px solid #B58C67;
+/* border: linear-gradient(90deg,rgba(224, 86, 42, 1) 0%, rgba(244, 171, 41, 1) 100%); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    margin-left: 290px;
+  
+
+    
+}
+
+.custom-btn {
+  width: 140px;
+  height: 40px;
+  color: #fff;
+
+
+  /* border-radius: 5px; */
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   /* box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none; */
+}
+
+
+.btn-7 {
+/* background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%); */
+  line-height: 42px;
+  padding: 0;
+  border: none;
+     /* border: 2px solid #B58C67 ; */
+
+}
+
+.btn-7 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+.btn-7:before,
+.btn-7:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background:  #b58b67a3;
+   /* box-shadow:
+   -7px -7px 20px 0px rgba(255,255,255,.9),
+   -4px -4px 5px 0px rgba(255,255,255,.9),
+   7px 7px 20px 0px rgba(0,0,0,.2),
+   4px 4px 5px 0px rgba(0,0,0,.3); */
+  transition: all 0.3s ease;
+} 
+
+
+.btn-7:before{
+   height: 0%;
+   width: 2px;
+}
+.btn-7:after {
+  width: 0%;
+  height: 2px;
+}
+/* .btn-7:hover{
+  color: white ;
+  background: transparent;
+} */
+
+.btn-7:hover:before {
+  height: 100%;
+}
+.btn-7:hover:after {
+  width: 100%;
+}
+.btn-7 span:before,
+.btn-7 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background:#b58b67a3 ;
+  /* box-shadow:
+   -7px -7px 20px 0px rgba(255,255,255,.9),
+   -4px -4px 5px 0px rgba(255,255,255,.9),
+   7px 7px 20px 0px rgba(0,0,0,.2),
+   4px 4px 5px 0px rgba(0,0,0,.3); */
+  transition: all 0.3s ease;
+} 
+
+.btn-7 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-7 span:after {
+  height: 2px;
+  width: 0%;
+}
+.btn-7 span:hover:before {
+  height: 100%;
+}
+.btn-7 span:hover:after {
+  width: 100%;
+}  
+
+button span{
+   font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+            /* button end */
+
+       
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .carousel-slides {
+            display: flex;
+            width: 400%;
+            height: 100%;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        .slide {
+            position: relative;
+            width: 25%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .slide-content {
+            position: relative;
+            text-align: center;
+            max-width: 800px;
+            padding: 0 20px;
+            z-index: 2;
+        }
+
+        .slide-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .slide-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease 0.3s;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #c9a96e;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease 0.6s;
+        }
+
+        .btn:hover {
+            background-color: #b8965a;
+        }
+
+        .active .slide-content h2,
+        .active .slide-content p,
+        .active .slide-content .btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .carousel-nav {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 3;
+        }
+
+   .nav-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #b8965a;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 50%;/* Makes square appear as diamond */
+}
+
+/* Active dot */
+.nav-dot.active {
+    width: 14px;
+    height: 14px;
+    border-radius: 0;
+    background: transparent;       /* square */
+    border: 2px solid #c9a96e;
+    transform: rotate(45deg); /* rotated to diamond */
+}
+
+
+    
+        .carousel-arrows {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            z-index: 3;
+        }
+
+        .arrow {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .arrow:hover {
+            background-color: rgba(201, 169, 110, 0.8);
+        }
+
+        /* Slide-specific backgrounds */
+        .slide-1 {
+            background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        }
+
+        .slide-2 {
+            background-image: url('https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        }
+
+        .slide-3 {
+            background-image: url('images/img2.jpg');
+        }
+
+        .slide-4 {
+            background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content h1 {
+      font-size: 55px;
+      font-weight: 700;
+      color: #C39771;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+
+    /* ===== Features Section ===== */
+    .features {
+      padding: 80px 0;
+      text-align: center;
+      background: #111;
+    }
+
+    .features h2 {
+      color: #C39771;
+      margin-bottom: 50px;
+      font-weight: 700;
+    }
+
+    .card-custom {
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 12px;
+      transition: 0.4s;
+    }
+
+    .card-custom:hover {
+      transform: translateY(-10px);
+      background: #2c2c2c;
+    }
+
+    /* ===== Explore & View Section ===== */
+    .text {
+      text-align: center;
+      margin: 60px 0 20px;
+    }
+
+    .text h3 {
+      color: white;
+      font-size: 1.3rem;
+    }
+
+    .text span {
+      color: #C39771;
+      font-size: 2.5rem;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    :root {
+  --gap: 1.25rem;
+  --speed: 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --closed: 5rem;
+  --open: 30rem;
+  --accent: #ff6b35;
+}
+
+
+.slider {
+  max-width: 1400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.track {
+  display: flex;
+  gap: var(--gap);
+  align-items: flex-start;
+  justify-content: center;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 40px;
+}
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.project-card {
+  position: relative;
+  flex: 0 0 var(--closed);
+  height: 26rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: flex-basis var(--speed), transform var(--speed);
+}
+.project-card[active] {
+  flex-basis: var(--open);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.45);
+}
+.project-card__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.75) saturate(75%);
+  transition: filter 0.3s, transform var(--speed);
+}
+.project-card:hover .project-card__bg {
+  filter: brightness(0.9) saturate(100%);
+  transform: scale(1.06);
+}
+
+.project-card__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0;
+  background: linear-gradient(transparent 40%, rgba(0, 0, 0, 0.85) 100%);
+  z-index: 2;
+}
+.project-card__title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.35rem;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+
+.project-card[active] .project-card__content {
+  flex-direction: row;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  gap: 1.1rem;
+}
+.project-card[active] .project-card__title {
+  writing-mode: horizontal-tb;
+  transform: none;
+  font-size: 2.4rem;
+}
+
+.dots {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 20px 0;
+}
+.dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.dot.active {
+  background: var(--accent);
+  transform: scale(1.2);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --closed: 4rem;
+    --open: 22rem;
+  }
+  
+  .track {
+    flex-direction: column;
+    scroll-snap-type: y mandatory;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 0;
+  }
+  .project-card {
+    height: 20rem;
+  }
+  .project-card__title {
+    font-size: 1.1rem;
+    writing-mode: horizontal-tb;
+    transform: none;
+    text-align: center;
+    padding-inline: 0.3rem;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --closed: 100%;
+    --open: 100%;
+    --gap: 0.8rem;
+  }
+  .slider {
+    padding: 0 15px;
+  }
+
+  .track {
+    flex-direction: column;
+    scroll-snap-type: y mandatory;
+    gap: 0.8rem;
+    padding-bottom: 20px;
+  }
+
+  .project-card {
+    height: auto;
+    min-height: 80px;
+    flex: 0 0 auto;
+    width: 100%;
+    scroll-snap-align: start;
+  }
+
+  .project-card[active] {
+    min-height: 300px;
+    transform: none;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .project-card__content {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 1rem;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .project-card__title {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 1.2rem;
+    margin-right: auto;
+  }
+
+
+  .project-card[active] .project-card__content {
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+
+  .project-card[active] .project-card__title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  
+
+  .dots {
+    display: none;
+  }
+
+  .controls {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 15px 20px;
+  }
+
+}
+
+    /* ===== Video Section ===== */
+    .video-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-section video {
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+    }
+
+    .video-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.3);
+    }
+
+  
+        body {
+            background: #1e1e1e;
+            color: #ffffff;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .reserve-section {
+            padding: 80px 0;
+        }
+
+        .reserve-text h5 {
+            color: #B58C67;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+        .reserve-text h1 {
+            font-weight: 700;
+            font-size: 35px;
+            line-height: 1.3;
+        }
+
+        .reserve-text h1 span {
+            color:#B58C67;
+        }
+
+        .reserve-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.08);
+        }
+
+        .btn-reserve {
+            background: #B58C67;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 30px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        footer{
+    max-width: 100%;
+    /* height: 400px; */
+ background: #191919;
+ /* padding: 60px 0; */
+
+        }
+
+ footer i{
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 50%;
+        background-color: transparent;
+            margin-right: 10px;
+            cursor: pointer;
+            box-sizing: content-box;
+            border: 1px solid #B58C67;
+            transition: 0.5s;
+        }
+
+        footer i:hover{
+            /* transform: scale(1); */
+            color: #191919;
+            background-color: #B58C67;
+            box-shadow: 0px 0px 10px #B58C67;
+        }
+
+        footer h4{
+                font-size: 20px;
+    line-height: 23px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    cursor: default;
+        }
+.logo{
+    transition: 0.3s;
+}
+
+.logo:hover{
+    transform: scale(1.05);
+}
+
+        footer p{
+            transition: 0.3s;
+            cursor: default;
+        }
+
+        footer p:hover{
+            color: #B58C67;
+
+        }
+        footer h4:hover{
+            color: #B58C67;
+
+        }
+
+
+footer .img{
+    width: 280px;
+    height: 190px;
+    /* margin-left: 33px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .box{
+    width: 83px;
+    height: 83px;
+    /* background-color: aqua; */
+    border-radius: 10px;
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+    background-image: url("https://savory.qodeinteractive.com/wp-content/uploads/2024/03/savory-n-instagram-img-6-200x200.jpg");
+}
+
+footer .box:hover{
+    transform: scale(1.1);
+}
+footer .box1{
+    width: 83px;
+    height: 83px;
+    border-radius: 10px;
+transition: 0.3s;
+    /* background-color: aqua; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://savory.qodeinteractive.com/wp-content/uploads/2024/03/savory-n-instagram-img-3-200x200.jpg");
+}
+
+footer .box1:hover{
+    transform: scale(1.1);
+}
+footer .box2{
+    width: 83px;
+    height: 83px;
+    border-radius: 10px;
+transition: 0.3s;
+    /* background-color: aqua; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://savory.qodeinteractive.com/wp-content/uploads/2024/03/savory-n-instagram-img-4-200x200.jpg");
+}
+
+footer .box2:hover{
+    transform: scale(1.1);
+}
+footer .box3{
+    width: 83px;
+    height: 83px;
+    /* background-color: aqua; */
+    border-radius: 10px;
+    transition: 0.3s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://savory.qodeinteractive.com/wp-content/uploads/2024/03/savory-n-instagram-img-2-200x200.jpg");
+}
+
+footer .box3:hover{
+    transform: scale(1.1);
+}
+footer .box4{
+    width: 83px;
+    height: 83px;
+    /* background-color: aqua; */
+    background-size: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+    background-repeat: no-repeat;
+    background-image: url("https://savory.qodeinteractive.com/wp-content/uploads/2024/03/savory-n-instagram-img-1-200x200.jpg");
+}
+
+footer .box4:hover{
+    transform: scale(1.1);
+}
+footer .box5{
+    width: 83px;
+    border-radius: 10px;
+    height: 83px;
+    transition: 0.3s;
+    /* background-color: aqua; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://savory.qodeinteractive.com/wp-content/uploads/2024/03/savory-n-instagram-img-5-200x200.jpg");
+}
+footer .box5:hover{
+    transform: scale(1.1);
+}
+    /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .slide-content h2 {
+                font-size: 2.5rem;
+            }
+            
+            .slide-content p {
+                font-size: 1rem;
+            }
+            
+            .carousel-arrows {
+                padding: 0 10px;
+            }
+            
+            .arrow {
+                width: 40px;
+                height: 40px;
+            }
+
+           
+        }
+
+         @media (max-width: 768px) {
+.box{
+    margin-left: 220px;
+}
+         }
+
+         @media (max-width: 450px) {
+.box{
+    margin-left: 127px;
+}
+         }
+
+             @media (max-width: 360px) {
+.box{
+    margin-left: 90px;
+}
+         }
+    
+  </style>
+</head>
+<body>
+<div id="loading-screen">
+        <div class="loading-container">
+      
+            <div class="loading-text"><h2>Sizzler Restaurant</h2></div>
+        </div>
+    </div>
+    <div class="website-content">
+
+<!-- ===== Navbar ===== -->
+
+<header class="position-fixed w-100 z-3">
+  <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #000000da;">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/sizzler-logo.png" alt="Logo" width="82" height="82">
+      </a>
+
+      <!-- Fixed Toggler Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                    style="    background-color: black;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="chef.html">Our Chefs</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Images Gallery</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="faq.html">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<!-- ===== Hero Section ===== -->
+  <div class="carousel-container">
+        <div class="carousel-slides">
+            <div class="slide slide-1 active">
+                <div class="slide-content">
+                    <h2>Welcome to Sizzler Restaurant</h2>
+                    <p>Experience the finest dining with our exquisite selection of sizzling dishes prepared by master chefs.</p>
+                    <div class="box">
+                 <button class="custom-btn btn-7" href="https://sizzler-form.netlify.app/"><span>BOOK A TABLE</span></button>
+            </div>
+                </div>
+            </div>
+            <div class="slide slide-2">
+                <div class="slide-content">
+                    <h2>Premium Quality Steaks</h2>
+                    <p>Our premium cuts are aged to perfection and grilled to your preference, delivering an unforgettable dining experience.</p><div class="col-md-5"></div>
+                    <div class="col-md-2">
+                    <div class="box">
+                 <button class="custom-btn btn-7"  href="https://sizzler-form.netlify.app/"><span>BOOK A TABLE</span></button></div>
+                 <div class="col-md-5"></div>
+            </div>
+                </div>
+            </div>
+            <div class="slide slide-3">
+                <div class="slide-content">
+                    <h2>Sizzling Specialties</h2>
+                    <p>From our signature sizzler platters to seafood delights, each dish is crafted with passion and the finest ingredients.</p>
+                      <div class="box">
+                 <button class="custom-btn btn-7"  href="https://sizzler-form.netlify.app/"><span>BOOK A TABLE</span></button>
+            </div>
+                </div>
+            </div>
+            <div class="slide slide-4">
+                <div class="slide-content">
+                    <h2>Elegant Ambiance</h2>
+                    <p>Enjoy our sophisticated atmosphere, perfect for romantic dinners, family gatherings, and special celebrations.</p>
+                  <div class="box">
+                 <button class="custom-btn btn-7"  href="https://sizzler-form.netlify.app/"><span>BOOK A TABLE</span></button>
+            </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-nav">
+            <div class="nav-dot active" data-slide="0"></div>
+            <div class="nav-dot" data-slide="1"></div>
+            <div class="nav-dot" data-slide="2"></div>
+            <div class="nav-dot" data-slide="3"></div>
+        </div>
+        
+        <div class="carousel-arrows">
+            <div class="arrow prev"><i class="fas fa-chevron-left"></i></div>
+            <div class="arrow next"><i class="fas fa-chevron-right"></i></div>
+        </div>
+    </div>
+
+
+<!-- ===== Features Section ===== -->
+<section class="features container" data-aos="fade-up">
+  <h2>What We Offer</h2>
+  <div class="row g-4">
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-custom">
+        <i class="fa-solid fa-utensils fa-2x mb-3" style="color:#C39771;"></i>
+        <h5>Quality Cuisine</h5>
+        <p>We serve freshly prepared dishes using the finest ingredients for unforgettable taste.</p>
+      </div>
+    </div>
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="card-custom">
+        <i class="fa-solid fa-wine-glass fa-2x mb-3" style="color:#C39771;"></i>
+        <h5>Luxury Ambience</h5>
+        <p>Enjoy your meal in a relaxing, elegant, and welcoming environment.</p>
+      </div>
+    </div>
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+      <div class="card-custom">
+        <i class="fa-solid fa-user-tie fa-2x mb-3" style="color:#C39771;"></i>
+        <h5>Professional Service</h5>
+        <p>Our staff ensures every guest enjoys an exceptional dining experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Explore & View Section ===== -->
+<section data-aos="fade-up">
+  <div class="text">
+    <h3>DEDICATED TO THE ART & SCIENCE OF CONTEMPORARY CUISINE</h3>
+    <span>for modern restaurateurs</span>
+  </div>
+
+
+<section>
+  <div class="head">
+    
+    <div class="controls">
+      <button id="prev" class="nav-btn" aria-label="Prev"></button>
+      <button id="next" class="nav-btn" aria-label="Next"></button>
+    </div>
+  </div>
+
+  <div class="slider">
+    <div class="track" id="track">
+
+      <article class="project-card" active>
+        <a href="https://sizzzler.netlify.app"><img class="project-card__bg" src="images/cafe.png" alt=""></a>
+        <div class="project-card__content">
+          
+          <div>
+            <h3 class="project-card__title">Cafe Home</h3>
+            
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">      
+          <a href="https://sizzler-shusi.netlify.app/"><img class="project-card__bg" src="images/shusi.png" alt=""></a>
+        <div class="project-card__content">
+          
+          <div>
+            <h3 class="project-card__title">Sushi Restaurant</h3>
+            
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+          <a href="https://sizzler-drink.netlify.app/"><img class="project-card__bg" src="images/drinks.png" alt=""></a>
+        <div class="project-card__content">
+          
+          <div>
+            <h3 class="project-card__title">Bar Home</h3>
+           
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+          <img class="project-card__bg" src="images/elegant.png" alt="">
+        <div class="project-card__content">
+         
+          <div>
+              <a href="https://sizzlerelegant.netlify.app" class="text-decoration-none" target="_blank"><h3 class="project-card__title">Elegant Restaurant</h3></a>
+            
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+          <img class="project-card__bg" src="images/Fine Dining Home .png" alt="">
+        <div class="project-card__content">
+         
+          <div>
+           <a href="https://sizzlerfinedininghome.netlify.app" class="text-decoration-none" target="_blank"> <h3 class="project-card__title">Fine Dinning Home</h3></a>
+            
+          </div>
+        </div>
+      </article>
+      
+      <article class="project-card">
+          <a href="https://steakhousepj.netlify.app"><img class="project-card__bg" src="images/steak.png" alt=""></a>
+        <div class="project-card__content">
+         
+          <div>
+            <h3 class="project-card__title">Steak House</h3>
+            
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div class="dots" id="dots"></div>
+</section>
+</section>
+
+<!-- ===== Video Section ===== -->
+<section class="video-section mt-5" data-aos="zoom-in">
+  <video autoplay muted loop>
+    <source src="video/istockphoto-2190949399-640_adpp_is.mp4" type="video/mp4">
+  </video>
+  <div class="video-overlay"></div>
+</section>
+
+<!-- ===== Footer ===== -->
+<!-- MAIN RESERVATION SECTION -->
+<section class="reserve-section container">
+    <div class="row align-items-center">
+
+        <!-- LEFT TEXT -->
+        <div class="col-lg-6 reserve-text">
+            <h5>• RESERVE A TABLE</h5>
+            <h1>
+                RESERVE NOW YOUR TABLE <br>
+                AND <span>ENJOY DINING</span> <br>
+                EXPERIENCE.
+            </h1>
+
+            <div class="mt-4">
+                <h6>Open Hours</h6>
+                <p>Mon - Thu &nbsp;&nbsp;&nbsp; 10:00 AM - 09:00 PM <br>
+                   Fri - Sat &nbsp;&nbsp;&nbsp; 09:00 AM - 10:00 PM <br>
+                   Sun &nbsp;&nbsp;&nbsp; Closed
+                </p>
+            </div>
+        </div>
+
+        <!-- RIGHT FORM CARD -->
+        <div class="col-lg-6 mt-4">
+            <div class="reserve-card">
+
+                <div class="row g-3">
+                    <div class="col-12">
+                        <label>Your Name</label>
+                        <input type="text" class="form-control" placeholder="name">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label>Email Address</label>
+                        <input type="email" class="form-control" placeholder="email ">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label>Phone Number</label>
+                        <input type="text" class="form-control" placeholder="03122987776">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label>Date</label>
+                        <input type="date" class="form-control">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label>Time</label>
+                        <select class="form-select">
+                            <option>Select time</option>
+                            <option>10:00 AM</option>
+                            <option>12:00 PM</option>
+                            <option>02:00 PM</option>
+                            <option>06:00 PM</option>
+                            <option>08:00 PM</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label>Number of Person</label>
+                        <select class="form-select">
+                            <option>Select</option>
+                            <option>1 Person</option>
+                            <option>2 Persons</option>
+                            <option>3 Persons</option>
+                            <option>4 Persons</option>
+                            <option>5+ Persons</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12">
+                        <button class="btn-reserve">Reserve Now</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row">
+      
+      <!-- About Us Section -->
+      <div class="col-md-4 mt-3 text-center" data-aos="fade-right" data-aos-duration="1000">
+        <h4>About Us</h4>
+        <p>For all the latest news and updates, <br> follow us on Twitter: @sizzler.com</p>
+        <div class="social-icons mt-2">
+          <i class="fa-brands fa-facebook-f mx-2"></i>
+          <i class="fa-brands fa-linkedin-in mx-2"></i>
+          <i class="fa-brands fa-instagram mx-2"></i>
+        </div>
+      </div>
+
+      <!-- Logo and Info Section -->
+      <div class="col-md-4 mt-3 text-center" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="images/sizzler project logo.png" alt="" class="logo mb-2">
+        <p>Sed ut perspiciatis unde omnis iste <br> natus error sit voluptatem accusantium doloremque.</p>
+        <p>+38764800000</p>
+      </div>
+
+      <!-- Gallery Section -->
+      <div class="col-md-4 mt-3" data-aos="fade-left" data-aos-duration="1000">
+        <h4>Taste The Difference</h4>
+        <div class="row img ">
+          <div class="col-3 box"></div>
+          <div class="col-3 box1"></div>
+          <div class="col-3 box2"></div>
+          <div class="col-3 box3"></div>
+          <div class="col-3 box4"></div>
+          <div class="col-3 box5"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="row">
+      <div class="col text-center mt-5" data-aos="fade-up" data-aos-duration="1000">
+        <p>© 2025 Red Sun Design. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+<script>
+setTimeout(function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            loadingScreen.style.opacity = '0';
+            setTimeout(function() {
+                loadingScreen.style.display = 'none';
+            }, 800);
+        }, 3000);
+
+
+
+  // AOS Initialization
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+
+  
+
+
+document.addEventListener('DOMContentLoaded', function() {
+         const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.nav-dot');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+const carouselSlides = document.querySelector('.carousel-slides');
+            
+            let currentSlide = 0;
+            const slideCount = slides.length;
+            let autoSlideInterval;
+            
+            // Function to go to a specific slide
+            function goToSlide(slideIndex) {
+                // Remove active class from current slide and dot
+                slides[currentSlide].classList.remove('active');
+                dots[currentSlide].classList.remove('active');
+                
+                // Update current slide index
+                currentSlide = (slideIndex + slideCount) % slideCount;
+                
+                // Move the carousel
+                carouselSlides.style.transform = `translateX(-${currentSlide * 25}%)`;
+                
+                // Add active class to new slide and dot
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+            }
+            
+            // Function to go to next slide
+            function nextSlide() {
+                goToSlide(currentSlide + 1);
+            }
+            
+            // Function to go to previous slide
+            function prevSlide() {
+                goToSlide(currentSlide - 1);
+            }
+            
+            // Set up auto slide
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(nextSlide, 5000);
+            }
+            
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+            
+            // Event listeners for navigation dots
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const slideIndex = parseInt(this.getAttribute('data-slide'));
+                    goToSlide(slideIndex);
+                    stopAutoSlide();
+                    startAutoSlide();
+                });
+            });
+            
+            // Event listeners for arrow buttons
+            prevBtn.addEventListener('click', function() {
+                prevSlide();
+                stopAutoSlide();
+                startAutoSlide();
+            });
+            
+            nextBtn.addEventListener('click', function() {
+                nextSlide();
+                stopAutoSlide();
+                startAutoSlide();
+            });
+            
+            // Pause auto slide on hover
+            const carouselContainer = document.querySelector('.carousel-container');
+            carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+            carouselContainer.addEventListener('mouseleave', startAutoSlide);
+            
+            // Start auto slide
+            startAutoSlide();
+        });
+
+
+
+
+        
+
+(() => {
+  const track = document.getElementById("track");
+  const wrap = track.parentElement;
+  const cards = Array.from(track.children);
+  const prev = document.getElementById("prev");
+  const next = document.getElementById("next");
+  const dotsBox = document.getElementById("dots");
+
+  const isMobile = () => matchMedia("(max-width:767px)").matches;
+
+  cards.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.className = "dot";
+    dot.onclick = () => activate(i, true);
+    dotsBox.appendChild(dot);
+  });
+  const dots = Array.from(dotsBox.children);
+
+  let current = 0;
+
+  function center(i) {
+    const card = cards[i];
+    const axis = isMobile() ? "top" : "left";
+    const size = isMobile() ? "clientHeight" : "clientWidth";
+    const start = isMobile() ? card.offsetTop : card.offsetLeft;
+    wrap.scrollTo({
+      [axis]: start - (wrap[size] / 2 - card[size] / 2),
+      behavior: "smooth"
+    });
+  }
+
+  function toggleUI(i) {
+    cards.forEach((c, k) => c.toggleAttribute("active", k === i));
+    dots.forEach((d, k) => d.classList.toggle("active", k === i));
+    prev.disabled = i === 0;
+    next.disabled = i === cards.length - 1;
+  }
+
+  function activate(i, scroll) {
+    if (i === current) return;
+    current = i;
+    toggleUI(i);
+    if (scroll) center(i);
+  }
+
+  function go(step) {
+    activate(Math.min(Math.max(current + step, 0), cards.length - 1), true);
+  }
+
+  prev.onclick = () => go(-1);
+  next.onclick = () => go(1);
+
+  addEventListener(
+    "keydown",
+    (e) => {
+      if (["ArrowRight", "ArrowDown"].includes(e.key)) go(1);
+      if (["ArrowLeft", "ArrowUp"].includes(e.key)) go(-1);
+    },
+    { passive: true }
+  );
+
+  cards.forEach((card, i) => {
+    card.addEventListener(
+      "mouseenter",
+      () => matchMedia("(hover:hover)").matches && activate(i, true)
+    );
+    card.addEventListener("click", () => activate(i, true));
+  });
+
+  let sx = 0,
+    sy = 0;
+  track.addEventListener(
+    "touchstart",
+    (e) => {
+      sx = e.touches[0].clientX;
+      sy = e.touches[0].clientY;
+    },
+    { passive: true }
+  );
+
+  track.addEventListener(
+    "touchend",
+    (e) => {
+      const dx = e.changedTouches[0].clientX - sx;
+      const dy = e.changedTouches[0].clientY - sy;
+      if (isMobile() ? Math.abs(dy) > 60 : Math.abs(dx) > 60)
+        go((isMobile() ? dy : dx) > 0 ? -1 : 1);
+    },
+    { passive: true }
+  );
+  if (window.matchMedia("(max-width:767px)").matches) dotsBox.hidden = true;
+
+  addEventListener("resize", () => center(current));
+
+  toggleUI(0);
+  center(0);
+})();
+
+ 
+</script>
+</body>
+</html>

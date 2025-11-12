@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sizzler | Frontend Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(120deg, #111, #1a1a1a);
+      color: #fff;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(135deg, #B58C67, #D9B382);
+      text-align: center;
+      padding: 60px 20px;
+      color: white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      letter-spacing: 3px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .topic {
+      background: #B58C67;
+      color: #fff;
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 700;
+      padding: 20px 0;
+      letter-spacing: 2px;
+      margin-top: -20px;
+      border-radius: 10px 10px 0 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+      animation: slideUp 1.5s ease forwards;
+    }
+
+    section h2 {
+      color: #B58C67;
+      margin-bottom: 25px;
+      font-size: 2.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    section h2::after {
+      content: '';
+      display: block;
+      width: 50%;
+      height: 3px;
+      background-color: #B58C67;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      width: 80%;
+      margin: 0 auto;
+      color: #e0e0e0;
+    }
+
+    .highlight {
+      color: #FFD07F;
+      font-weight: 600;
+    }
+
+    .team {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 25px;
+      width: 280px;
+      backdrop-filter: blur(10px);
+      transition: all 0.4s ease;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .card:hover {
+      background: #B58C67;
+      color: black;
+      transform: translateY(-15px) scale(1.05);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    }
+
+    .card h3 {
+      color: #FFD07F;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    .card:hover h3 {
+      color: #fff;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .feature-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px 25px;
+      border-radius: 15px;
+      width: 250px;
+      backdrop-filter: blur(8px);
+      transition: 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .feature-card:hover {
+      background: #FFD07F;
+      color: black;
+      transform: translateY(-10px) scale(1.03);
+    }
+
+    footer {
+      margin-top: 60px;
+      background-color: #111;
+      color: #ddd;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.95rem;
+      border-top: 2px solid #B58C67;
+      letter-spacing: 1px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      section p, .card, .feature-card {
+        width: 95%;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Our Frontend Project</h1>
+    <p>By The Hunar Foundation | Instructor: <strong>Sir Zohaib Ahmed</strong></p>
+  </header>
+
+  <div class="topic">Sizzler</div>
+
+  <section>
+    <h2>About Sizzler</h2>
+    <p>
+      <span class="highlight">Sizzler</span> is a modern, interactive frontend project created to showcase creativity and web development skills. 
+      It is designed with responsive layouts, smooth animations, and elegant color schemes. 
+      Users can explore menus, galleries, and team sections in an engaging and visually pleasing way.
+    </p>
+  </section>
+
+  <section>
+    <h2>Unique Features</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>Interactive Menu</h3>
+        <p>Dynamic menu sections with hover animations and carousel slides for a modern experience.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Responsive Design</h3>
+        <p>Perfectly adapts to mobile, tablet, and desktop screens without breaking layouts.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Glassmorphism Cards</h3>
+        <p>Stylish frosted-glass style cards with smooth hover transitions for team and feature sections.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Modern Animations</h3>
+        <p>Smooth fade, slide, and hover effects make the website interactive and engaging.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Our Team Roles</h2>
+    <div class="team">
+      <div class="card">
+        <h3>Khushi</h3>
+        <p>Built the Gallery and Chef Page.<br>Contributed to the final section of the Home Page.</p>
+      </div>
+      <div class="card">
+        <h3>Hafsa</h3>
+        <p>Created the FAQ and Blog Page.<br>Designed the website logo and home starting section.</p>
+      </div>
+      <div class="card">
+        <h3>Anum</h3>
+        <p>Developed the Menu and About Page.<br>Main contributor to Home Page and inner carousel pages.</p>
+      </div>
+      <div class="card">
+        <h3>Sarim</h3>
+        <p>Built the Content Page and Purchase Form.<br>Contributed to last Home Page section and carousel pages.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Frontend Journey</h2>
+    <p>
+      Our journey into frontend development has been creative and rewarding.
+      We learned to combine colors, layouts, and animations to make user-friendly designs.
+      Each team member worked with dedication to make <span class="highlight">Sizzler</span> interactive, elegant, and modern.
+    </p>
+  </section>
+
+  <footer>
+    © Designed by Team Sizzler | Modernized 2025
+  </footer>
+
+</body>
+</html>
