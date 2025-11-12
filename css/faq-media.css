@@ -1,0 +1,16 @@
+@media(max-width:390px){
+
+    h1{
+        font-size: 30px !important;
+
+    }
+}
+
+@media(max-width:230px){
+
+    h1{
+        font-size: 20px !important;
+
+    }
+}
+

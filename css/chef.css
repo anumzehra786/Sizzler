@@ -46,6 +46,7 @@
             }
         }
 
+
         /* Main Website Styles */
         .website-content {
             opacity: 0;
@@ -80,65 +81,98 @@ nav ul li:hover::after {
 }
 
 .home{
-    background:url(../images/Screenshot\ 2025-11-07\ 191059.png) ;
+    background:url("https://i.pinimg.com/1200x/c2/e0/a0/c2e0a0038c541165e3dc2ca2b15c5db9.jpg");
     background-size: cover;
     background-position: center;
     height: 600px;
     width: 100%;
 }
 
-.app{
-    font-size: 15px;
-    background-color: #C39771;
-    width: 200px;
-    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0 100%, 7% 50%, 0 0);
-}
-
-.clr{
-    color: #C39771 !important;
-}
-
-.mvv{
-  margin-top: 50px;
-  background-color: rgba(72, 71, 71, 0.3);
+.box{
+  height: 600px;
   width: 100%;
-  height: 50px;
+  background-color: rgba(0, 0, 0, 0.651);
   display: flex;
-  border-radius: 50px;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
-.circle{
-  width: 5px;
-  height: 5px;
-  background-color: #C39771;
-  border-radius: 100%;
+
+.chefs {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #141414;
 }
 
-.hclr{
-  transition: 0.2s;
+.chefs h2 {
+  color: #B58C67;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
 }
 
-.hclr:hover{
-  color: #C39771 !important;
+.chefs p {
+  color: #ccc;
+  margin-bottom: 3rem;
 }
 
-.fnt{
-  font-size: 20px;
-  font-family: 'Times New Roman', Times, serif;
+.chef-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
 }
 
-.fnt-top{
-  font-size: 25px;
+.chef-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.fnt-h1{
-  font-size: 30px;
-  font-family: 'Times New Roman', Times, serif;
+.chef-card {
+  background: #1f1f1f;
+  border-radius: 15px;
+  width: 300px;
+  padding: 1.5rem;
+  transition: all 0.6s ease;
+  transform: translateY(60px);
+  opacity: 0;
+  box-shadow: 0 0 10px rgba(245, 197, 66, 0.2);
 }
 
-.img{
-  border-radius:10%;
+.chef-card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.chef-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  transition: transform 0.5s ease;
+}
+
+.chef-card:hover img {
+  transform: scale(1.05);
+}
+
+.chef-card h3 {
+  color: #B58C67;
+  margin-bottom: 0.3rem;
+}
+
+.chef-card p {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .chef-row {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
  footer{

@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,900;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Meow+Script&family=Nunito:ital,wght@0,900;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&family=Sanchez:ital@0;1&family=Stack+Sans+Text:wght@218&display=swap');
+body{
+    background-color: black;
+}
+.container{
+  /* border: 2px solid red; */
+}
         /* Loading Screen Styles */
         #loading-screen {
             position: fixed;
@@ -15,8 +22,7 @@
         .loading-container {
             text-align: center;
         }
-
-        h2{
+  h2{
             font-size: 40px;
   font-optical-sizing: auto;
   font-weight: 900;
@@ -57,11 +63,23 @@
         }
 
 
+
+
+
+
 header{
     max-width: 100%;
     height: 90px;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
+      
+}
 
+nav ul li a{
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  background-color: #191919;
+  z-index: 1;
 }
 
 nav ul li::after {
@@ -76,71 +94,106 @@ background: linear-gradient(90deg,rgba(224, 86, 42, 1) 0%, rgba(244, 171, 41, 1)
 }
 
 nav ul li:hover::after {
- width:100%;
-}
-
-.home{
-    background:url(../images/Screenshot\ 2025-11-07\ 191059.png) ;
-    background-size: cover;
-    background-position: center;
-    height: 600px;
-    width: 100%;
-}
-
-.app{
-    font-size: 15px;
-    background-color: #C39771;
-    width: 200px;
-    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0 100%, 7% 50%, 0 0);
-}
-
-.clr{
-    color: #C39771 !important;
-}
-
-.mvv{
-  margin-top: 50px;
-  background-color: rgba(72, 71, 71, 0.3);
   width: 100%;
-  height: 50px;
+}
+
+
+.bg{
+    max-width: 100%;
+    height: 500px;
+    background-image: url("../images/well-done-steak-homemade-potatoes.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white !important;
+    /* margin-top: -50px; */
+}
+
+.op{
+     max-width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.413);
+ 
+}
+
+.fix{
+  max-width: 100%;
+  /* height: 400px; */
+  background-image: url("../images/high-angle-tasty-pakistani-dish.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.fix h1{
+  font-size: 60px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal
+}
+
+.bc{
+  max-width: 100%;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.402);
+  z-index: 1;
   display: flex;
-  border-radius: 50px;
-  justify-content: space-around;
   align-items: center;
-}
-.circle{
-  width: 5px;
-  height: 5px;
-  background-color: #C39771;
-  border-radius: 100%;
+  justify-content: center;
+  color: white;
+
 }
 
-.hclr{
-  transition: 0.2s;
+section h2{
+  font-size: 90px;
 }
 
-.hclr:hover{
-  color: #C39771 !important;
-}
 
-.fnt{
-  font-size: 20px;
-  font-family: 'Times New Roman', Times, serif;
-}
+body {
+            background: #1e1e1e;
+            color: #ffffff;
+            font-family: "Poppins", sans-serif;
+        }
 
-.fnt-top{
-  font-size: 25px;
-}
 
-.fnt-h1{
-  font-size: 30px;
-  font-family: 'Times New Roman', Times, serif;
-}
+  .reserve-section {
+            padding: 80px 0;
+        }
 
-.img{
-  border-radius:10%;
-}
+        .reserve-text h5 {
+            color: #B58C67;
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #fff;
+        }
 
+        .reserve-text h1 {
+            font-weight: 700;
+            font-size: 35px;
+            line-height: 1.3;
+        }
+
+        .reserve-text h1 span {
+            color:#B58C67;
+        }
+
+        .reserve-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.08);
+        }
+
+        .btn-reserve {
+            background: #B58C67;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 30px;
+            font-weight: 600;
+            color: #fff;
+        }
  footer{
     max-width: 100%;
     /* height: 400px; */
@@ -292,3 +345,121 @@ footer .box5{
 footer .box5:hover{
     transform: scale(1.1);
 }
+main{
+  max-width: 100%;
+  height: auto;
+  background-color: black;
+  padding-top: 50px ;
+}
+
+.box{
+  width: 300px;
+  height: 250px;
+  background-color: #191919;
+  border-radius: 35px;
+  
+}
+
+.box:hover{
+    transform: scale(2.05);
+
+}
+
+
+/* .hv{
+    width: 300px;
+    height: 450px;
+    background-color: #B58C67;
+    border-radius: 25px;
+    box-shadow:  0px 0px 50px  #B58C67;
+    transform: rotate(-120deg);
+    position: absolute;
+    top: -290px;
+    left: -250px;
+  transition: 0.5s;
+  overflow: hidden;
+   opacity: 0.3;
+} 
+
+.im:hover .hv{
+    top: 290px;
+    left:  100px;
+     
+}
+
+.cr{
+  width: 150px;
+  height: 150px;
+  margin-top: 60px;
+  margin-right: -30px;
+  z-index: 1;
+  background-color: #E0562A;
+  border-radius: 100px;
+
+} */
+.img{
+  width: 300px;
+  height: 250px;
+  background-image: url("https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg");
+  border-radius: 35px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.img1{
+  width: 300px;
+  height: 250px;
+  background-image: url("https://www.dineplan.com/blog/wp-content/uploads/2023/12/3.png");
+  border-radius: 35px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.img2{
+  width: 300px;
+  height: 250px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQalWG6R6tx_80vnQ0J1P104Do65iTkEz6YZ94HxkkjLQpqU8R4KJSta_MF-R7Suhfhdc8&usqp=CAU");
+  border-radius: 35px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.img3{
+  width: 300px;
+  height: 250px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_CyEsJ_7mMEy7jHkc0eHvyNOb3rqWKpfJm_cef6-xQGrXJQnrZzbwdnloLvG3HgzFvuQ&usqp=CAU");
+  border-radius: 35px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.img4{
+  width: 300px;
+  height: 250px;
+  background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/99/23/0b/20180707-094330-hdr-largejpg.jpg?w=900&h=500&s=1");
+  border-radius: 35px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.img5{
+  width: 300px;
+  height: 250px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIBK1iRmxkpZC5MU2XltChOBmueJFwCqyG5A&s");
+  border-radius: 35px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.box + h5{
+  color: #B58C67;
+}
+
+h5 + a{
+  text-decoration: none;
+   color: #B58C67;
+  
+
+}
+

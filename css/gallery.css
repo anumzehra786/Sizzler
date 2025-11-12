@@ -45,8 +45,7 @@
                 background-position: 0% 0%;
             }
         }
-
-        /* Main Website Styles */
+    /* Main Website Styles */
         .website-content {
             opacity: 0;
             animation: fadeIn 0.8s ease-in 5s forwards;
@@ -80,65 +79,57 @@ nav ul li:hover::after {
 }
 
 .home{
-    background:url(../images/Screenshot\ 2025-11-07\ 191059.png) ;
+    background:url("https://i.pinimg.com/736x/bf/bc/ed/bfbcedee5c1fc06294a4408c2548c805.jpg");
     background-size: cover;
     background-position: center;
     height: 600px;
     width: 100%;
 }
 
-.app{
-    font-size: 15px;
-    background-color: #C39771;
-    width: 200px;
-    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0 100%, 7% 50%, 0 0);
-}
-
-.clr{
-    color: #C39771 !important;
-}
-
-.mvv{
-  margin-top: 50px;
-  background-color: rgba(72, 71, 71, 0.3);
+.box{
+  height: 600px;
   width: 100%;
-  height: 50px;
+  background-color: rgba(0, 0, 0, 0.651);
   display: flex;
-  border-radius: 50px;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
-.circle{
-  width: 5px;
-  height: 5px;
-  background-color: #C39771;
-  border-radius: 100%;
+
+
+/* Gallery Section */
+.gallery {
+  text-align: center;
+  padding: 3rem 1rem;
 }
 
-.hclr{
-  transition: 0.2s;
+.gallery h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: #f5c542;
 }
 
-.hclr:hover{
-  color: #C39771 !important;
+.gallery p {
+  margin-bottom: 2rem;
+  color: #ccc;
 }
 
-.fnt{
-  font-size: 20px;
-  font-family: 'Times New Roman', Times, serif;
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 3rem;
 }
 
-.fnt-top{
-  font-size: 25px;
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.4s, box-shadow 0.4s;
+  cursor: pointer;
 }
 
-.fnt-h1{
-  font-size: 30px;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-.img{
-  border-radius:10%;
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #f5c542;
 }
 
  footer{
