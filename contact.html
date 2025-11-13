@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="icon" href="images/sizzler-logo.png">
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <style>
-                /* Loading Screen Styles */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,900;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Meow+Script&family=Nunito:ital,wght@0,900;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&family=Sanchez:ital@0;1&family=Stack+Sans+Text:wght@218&display=swap');
+body{
+    background-color: black;
+        
+       width: 100%;
+       overflow-x: hidden;
+     }
+     
+     /* Loading Screen Styles */
         #loading-screen {
             position: fixed;
             top: 0;
@@ -72,104 +64,97 @@
             to { opacity: 1; }
         }
 
-      
-        /* Navbar */
-        .navbar {
-            background: #1b1b1b;
-            padding: 15px 0;
-        }
 
-        .navbar-brand {
-            font-size: 22px;
-            font-weight: 600;
-            color: #e7e4c3 !important;
-        }
+header{
+    max-width: 100%;
+    height: 90px;
+    background-color: black;
 
-        .nav-link {
-            color: #ffffff !important;
-            margin: 0 10px;
-        }
+}
 
-        .book-btn {
-            background: #B58C67;
-            color: white;
-            border-radius: 20px;
-            padding: 7px 18px !important;
-            font-weight: 600;
-            transition: 0.3s;
-        }
+nav ul li::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  margin-top: -5px;
+  background: #E0562A;
+background: linear-gradient(90deg,rgba(224, 86, 42, 1) 0%, rgba(244, 171, 41, 1) 100%);
+  transition: width ease .2s;
+}
 
-        /* Hero Section */
-        .hero {
-            background: url(background\ photo.jpg) center/cover no-repeat;
-            padding: 100px 0;
-            text-align: center;
-            position: relative;
-        }
+nav ul li:hover::after {
+ width:100%;
+}
 
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 700;
-        }
+.home{
+    background:url(../images/Screenshot\ 2025-11-07\ 191059.png) ;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    width: 100%;
+}
 
-        /* Contact Section */
-        .contact-section {
-            padding: 70px 0;
-        }
+.app{
+    font-size: 15px;
+    background-color: #C39771;
+    width: 200px;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0 100%, 7% 50%, 0 0);
+}
 
-        .section-title {
-            font-size: 30px;
-            font-weight: 700;
-        }
+.clr{
+    color: #C39771 !important;
+}
 
-        .section-title span {
-            color: #B58C67;
-        }
+.mvv{
+  margin-top: 50px;
+  background-color: rgba(72, 71, 71, 0.3);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  border-radius: 50px;
+  justify-content: space-around;
+  align-items: center;
+}
+.circle{
+  width: 5px;
+  height: 5px;
+  background-color: #C39771;
+  border-radius: 100%;
+}
 
-        /* Contact Card */
-        .contact-card {
-            background: #1b1b1b;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0px 4px 25px rgba(0,0,0,0.4);
-        }
+.hclr{
+  transition: 0.2s;
+}
 
-        .contact-card label {
-            color: #cfcfcf;
-            margin-bottom: 5px;
-        }
+.hclr:hover{
+  color: #C39771 !important;
+}
 
-        .contact-card input,
-        .contact-card textarea {
-            background: #141414;
-            border: 1px solid #2a2a2a;
-            color: white;
-        }
+.fnt{
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
 
-        .submit-btn {
-            background: #B58C67;
-            color: white;
-            width: 100%;
-            padding: 10px;
-            border-radius: 30px;
-            font-weight: 600;
-            border: none;
-        }
+.fnt-top{
+  font-size: 25px;
+}
 
-        .social i {
-            font-size: 22px;
-            margin-right: 12px;
-            cursor: pointer;
-            color: #B58C67;
-        }
+.fnt-h1{
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
 
-        input::placeholder {
-            color: #b58b6789 !important;
-        }
-            body {
+.img{
+  border-radius:10%;
+}
+
+  body {
             background: #1e1e1e;
             color: #ffffff;
             font-family: "Poppins", sans-serif;
+            overflow-x: hidden;
+  width: 100%;
         }
 
         .reserve-section {
@@ -180,6 +165,364 @@
             color: #B58C67;
             font-size: 14px;
             letter-spacing: 2px;
+        }
+
+        .reserve-text h1 {
+            font-weight: 700;
+            font-size: 35px;
+            line-height: 1.3;
+        }
+
+        .reserve-text h1 span {
+            color:#B58C67;
+        }
+
+        .reserve-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.08);
+             max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+        }
+
+        .btn-reserve {
+            background: #B58C67;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 30px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+
+ footer{
+    max-width: 100%;
+    /* height: 400px; */
+ background: #191919;
+ /* padding: 60px 0; */
+
+        }
+
+ footer i{
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 50%;
+        background-color: transparent;
+            margin-right: 10px;
+            cursor: pointer;
+            box-sizing: content-box;
+            border: 1px solid #B58C67;
+            transition: 0.5s;
+        }
+
+        footer i:hover{
+            /* transform: scale(1); */
+            color: #191919;
+            background-color: #B58C67;
+            box-shadow: 0px 0px 10px #B58C67;
+        }
+
+        footer h4{
+                font-size: 20px;
+    line-height: 23px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    cursor: default;
+        }
+.logo{
+    transition: 0.3s;
+}
+
+.logo:hover{
+    transform: scale(1.05);
+}
+
+        footer p{
+            transition: 0.3s;
+            cursor: default;
+        }
+
+        footer p:hover{
+            color: #B58C67;
+
+        }
+        footer h4:hover{
+            color: #B58C67;
+
+        }
+
+
+footer .img{
+    width: 280px;
+    height: 190px;
+    /* margin-left: 33px; */
+    display: flex;
+  
+   
+  justify-content: space-around;
+}
+
+
+
+footer .box{
+    width: 83px;
+    height: 83px;
+    /* background-color: aqua; */
+    border-radius: 10px;
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+    background-image: url("https://savory.qodeinteractive.com/wp-content/uploads/2024/03/savory-n-instagram-img-6-200x200.jpg");
+}
+
+footer .box:hover{
+    transform: scale(1.1);
+}
+footer .box1{
+    width: 83px;
+    height: 83px;
+    border-radius: 10px;
+transition: 0.3s;
+    /* background-color: aqua; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://savory.qodeinteractive.com/wp-content/uploads/2024/03/savory-n-instagram-img-3-200x200.jpg");
+}
+
+footer .box1:hover{
+    transform: scale(1.1);
+}
+footer .box2{
+    width: 83px;
+    height: 83px;
+    border-radius: 10px;
+transition: 0.3s;
+    /* background-color: aqua; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://savory.qodeinteractive.com/wp-content/uploads/2024/03/savory-n-instagram-img-4-200x200.jpg");
+}
+
+footer .box2:hover{
+    transform: scale(1.1);
+}
+footer .box3{
+    width: 83px;
+    height: 83px;
+    /* background-color: aqua; */
+    border-radius: 10px;
+    transition: 0.3s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://savory.qodeinteractive.com/wp-content/uploads/2024/03/savory-n-instagram-img-2-200x200.jpg");
+}
+
+footer .box3:hover{
+    transform: scale(1.1);
+}
+footer .box4{
+    width: 83px;
+    height: 83px;
+    /* background-color: aqua; */
+    background-size: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+    background-repeat: no-repeat;
+    background-image: url("https://savory.qodeinteractive.com/wp-content/uploads/2024/03/savory-n-instagram-img-1-200x200.jpg");
+}
+
+footer .box4:hover{
+    transform: scale(1.1);
+}
+footer .box5{
+    width: 83px;
+    border-radius: 10px;
+    height: 83px;
+    transition: 0.3s;
+    /* background-color: aqua; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://savory.qodeinteractive.com/wp-content/uploads/2024/03/savory-n-instagram-img-5-200x200.jpg");
+}
+footer .box5:hover{
+    transform: scale(1.1);
+}
+
+.row{
+    margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.container{
+  /* border: 2px solid red; */
+}
+        /* Loading Screen Styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loading-container {
+            text-align: center;
+        }
+  h2{
+            font-size: 40px;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal
+        }
+
+        .loading-text {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: transparent;
+            background: linear-gradient(to top, #c9a96e 0%, #c9a96e 50%, rgba(255, 255, 255, 0.2) 50%);
+            background-size: 100% 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            position: relative;
+            animation: fillText 5s ease-in-out forwards;
+            letter-spacing: 2px;
+        }
+
+        @keyframes fillText {
+            0% {
+                background-position: 0% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        /* Main Website Styles */
+        .website-content {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-in 5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+
+
+
+
+
+header{
+    max-width: 100%;
+    height: 90px;
+    background-color: rgb(0, 0, 0);
+      
+}
+
+nav ul li a{
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  background-color: #191919;
+  z-index: 1;
+}
+
+nav ul li::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  margin-top: -5px;
+  background: #E0562A;
+background: linear-gradient(90deg,rgba(224, 86, 42, 1) 0%, rgba(244, 171, 41, 1) 100%);
+  transition: width ease .2s;
+}
+
+nav ul li:hover::after {
+  width: 100%;
+}
+
+
+.bg{
+    max-width: 100%;
+    height: 500px;
+    background-image: url("../images/well-done-steak-homemade-potatoes.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white !important;
+    /* margin-top: -50px; */
+}
+
+.op{
+     max-width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.413);
+ 
+}
+
+.fix{
+  max-width: 100%;
+  /* height: 400px; */
+  background-image: url("../images/high-angle-tasty-pakistani-dish.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.fix h1{
+  font-size: 60px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal
+}
+
+.bc{
+  max-width: 100%;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.402);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+}
+
+section h2{
+  font-size: 90px;
+}
+
+
+body {
+            background: #1e1e1e;
+            color: #ffffff;
+            font-family: "Poppins", sans-serif;
+        }
+
+
+  .reserve-section {
+            padding: 80px 0;
+        }
+
+        .reserve-text h5 {
+            color: #B58C67;
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #fff;
         }
 
         .reserve-text h1 {
@@ -209,8 +552,7 @@
             font-weight: 600;
             color: #fff;
         }
-
-         footer{
+ footer{
     max-width: 100%;
     /* height: 400px; */
  background: #191919;
@@ -361,259 +703,121 @@ footer .box5{
 footer .box5:hover{
     transform: scale(1.1);
 }
-    </style>
-</head>
+main{
+  max-width: 100%;
+  height: auto;
+  background-color: black;
+  padding-top: 50px ;
+}
 
-<body>
-      <div id="loading-screen">
-        <div class="loading-container">
-      
-            <div class="loading-text"><h2>Sizzler Restaurant</h2></div>
-        </div>
-    </div>
+.box{
+  width: 300px;
+  height: 250px;
+  background-color: #191919;
+  border-radius: 35px;
+  
+}
 
-    <div class="website-content">
-<!-- NAVBAR -->
-   <header class="position-fixed w-100 z-3">
-  <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #000000da;">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="images/sizzler-logo.png" alt="Logo" width="82" height="82">
-                </a>
+.box:hover{
+    transform: scale(2.05);
 
-                <!-- Toggler button (will stay on right) -->
-                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
-                    style="    background-color: black;">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Navbar links -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
-<li class="nav-item"><a class="nav-link text-white" href="chef.html">Our Chefs</a></li>
-                                <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Images Gallery</a></li>
-                                 <li class="nav-item"><a class="nav-link text-white" href="faq.html">FAQs</a></li>
-                                 <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link text-white" href="menu.html">Menu</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-<!-- HERO SECTION -->
-<section class="hero" data-aos="fade-down">
-    <h1 class="mt-5">CONTACT US</h1>
-    <p>Home  Contact Us</p>
-</section>
-
-<!-- CONTACT SECTION -->
-<section class="contact-section container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row justify-content-between">
-
-        <!-- LEFT SIDE -->
-        <div class="col-lg-5" data-aos="fade-right" data-aos-delay="200">
-            <p style="color:#B58C67;">CONTACT US</p>
-            <h2 class="section-title">GET IN TOUCH <span>WITH US</span></h2>
-            <p class="mt-3">
-                Have questions or feedback? Reach out using the form beside, call us, or visit our restaurant.
-            </p>
-
-            <p class="mt-4">27 Division St, New York, NY 10002, USA</p>
-            <p>+1 780 859 632</p>
-            <p>info@domainname.com</p>
-
-            <div class="social mt-3" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-facebook"></i>
-                <i class="bi bi-instagram"></i>
-                <i class="bi bi-twitter"></i>
-            </div>
-        </div>
-
-        <!-- RIGHT SIDE / CONTACT FORM -->
-        <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200">
-            <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
-                <label class="ms-2">Your Name</label>
-                <input type="text" class="form-control mb-3" placeholder="Name">
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <label class="ms-2">Email Address</label>
-                        <input type="email" class="form-control mb-3" placeholder="Email">
-                    </div>
-                    <div class="col-md-6">
-                        <label class="ms-2">Phone Number</label>
-                        <input type="text" class="form-control mb-3" placeholder="+123 456 879 2">
-                    </div>
-                </div>
-
-                <label class="ms-2">Write Message…</label>
-                <textarea rows="4" class="form-control mb-3"></textarea>
-
-                <button class="submit-btn" data-aos="zoom-in" data-aos-delay="400">Submit</button>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- MAIN RESERVATION SECTION -->
-<section class="reserve-section container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row align-items-center">
-        <!-- LEFT TEXT -->
-        <div class="col-lg-6 reserve-text" data-aos="fade-right" data-aos-delay="200">
-            <h5>• RESERVE A TABLE</h5>
-            <h1>
-                RESERVE NOW YOUR TABLE <br>
-                AND <span>ENJOY DINING</span> <br>
-                EXPERIENCE.
-            </h1>
-
-            <div class="mt-4">
-                <h6>Open Hours</h6>
-                <p>Mon - Thu &nbsp;&nbsp;&nbsp; 10:00 AM - 09:00 PM <br>
-                   Fri - Sat &nbsp;&nbsp;&nbsp; 09:00 AM - 10:00 PM <br>
-                   Sun &nbsp;&nbsp;&nbsp; Closed
-                </p>
-            </div>
-        </div>
-
-        <!-- RIGHT FORM CARD -->
-        <div class="col-lg-6 mt-4" data-aos="fade-left" data-aos-delay="300">
-            <div class="reserve-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="row g-3">
-                    <div class="col-12">
-                        <label>Your Name</label>
-                        <input type="text" class="form-control" placeholder="name">
-                    </div>
-
-                    <div class="col-md-6">
-                        <label>Email Address</label>
-                        <input type="email" class="form-control" placeholder="email ">
-                    </div>
-
-                    <div class="col-md-6">
-                        <label>Phone Number</label>
-                        <input type="text" class="form-control" placeholder="03122987776">
-                    </div>
-
-                    <div class="col-md-4">
-                        <label>Date</label>
-                        <input type="date" class="form-control">
-                    </div>
-
-                    <div class="col-md-4">
-                        <label>Time</label>
-                        <select class="form-select">
-                            <option>Select time</option>
-                            <option>10:00 AM</option>
-                            <option>12:00 PM</option>
-                            <option>02:00 PM</option>
-                            <option>06:00 PM</option>
-                            <option>08:00 PM</option>
-                        </select>
-                    </div>
-
-                    <div class="col-md-4">
-                        <label>Number of Person</label>
-                        <select class="form-select">
-                            <option>Select</option>
-                            <option>1 Person</option>
-                            <option>2 Persons</option>
-                            <option>3 Persons</option>
-                            <option>4 Persons</option>
-                            <option>5+ Persons</option>
-                        </select>
-                    </div>
-
-                    <div class="col-12">
-                        <button class="btn-reserve" data-aos="zoom-in" data-aos-delay="500">Reserve Now</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="row">
-      
-      <!-- About Us Section -->
-      <div class="col-md-4 mt-3 text-center" data-aos="fade-right" data-aos-duration="1000">
-        <h4>About Us</h4>
-        <p>For all the latest news and updates, <br> follow us on Twitter: @sizzler.com</p>
-        <div class="social-icons mt-2">
-          <i class="fa-brands fa-facebook-f mx-2"></i>
-          <i class="fa-brands fa-linkedin-in mx-2"></i>
-          <i class="fa-brands fa-instagram mx-2"></i>
-        </div>
-      </div>
-
-      <!-- Logo and Info Section -->
-      <div class="col-md-4 mt-3 text-center" data-aos="zoom-in" data-aos-duration="1000">
-        <img src="images/sizzler project logo.png" alt="" class="logo mb-2">
-        <p>Sed ut perspiciatis unde omnis iste <br> natus error sit voluptatem accusantium doloremque.</p>
-        <p>+38764800000</p>
-      </div>
-
-      <!-- Gallery Section -->
-      <div class="col-md-4 mt-3" data-aos="fade-left" data-aos-duration="1000">
-        <h4>Taste The Difference</h4>
-        <div class="row img ">
-          <div class="col-3 box"></div>
-          <div class="col-3 box1"></div>
-          <div class="col-3 box2"></div>
-          <div class="col-3 box3"></div>
-          <div class="col-3 box4"></div>
-          <div class="col-3 box5"></div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Copyright -->
-    <div class="row">
-      <div class="col text-center mt-5" data-aos="fade-up" data-aos-duration="1000">
-        <p>© 2025 Red Sun Design. All Rights Reserved.</p>
-      </div>
-    </div>
-  </div>
-</footer>
+}
 
 
+/* .hv{
+    width: 300px;
+    height: 450px;
+    background-color: #B58C67;
+    border-radius: 25px;
+    box-shadow:  0px 0px 50px  #B58C67;
+    transform: rotate(-120deg);
+    position: absolute;
+    top: -290px;
+    left: -250px;
+  transition: 0.5s;
+  overflow: hidden;
+   opacity: 0.3;
+} 
 
-<!-- Bootstrap Icons CDN -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+.im:hover .hv{
+    top: 290px;
+    left:  100px;
+     
+}
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-      setTimeout(function() {
-            const loadingScreen = document.getElementById('loading-screen');
-            loadingScreen.style.opacity = '0';
-            setTimeout(function() {
-                loadingScreen.style.display = 'none';
-            }, 800);
-        }, 3000);
-</script>
- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1200, // animation duration in ms
-    once: true // whether animation should happen only once - while scrolling down
-  });
-</script>
-</body>
-</html>
+.cr{
+  width: 150px;
+  height: 150px;
+  margin-top: 60px;
+  margin-right: -30px;
+  z-index: 1;
+  background-color: #E0562A;
+  border-radius: 100px;
 
+} */
+.img{
+  width: 300px;
+  height: 250px;
+  background-image: url("https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg");
+  border-radius: 35px;
+  background-size: cover;
+  background-repeat: no-repeat;
 
+}
 
+.img1{
+  width: 300px;
+  height: 250px;
+  background-image: url("https://www.dineplan.com/blog/wp-content/uploads/2023/12/3.png");
+  border-radius: 35px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.img2{
+  width: 300px;
+  height: 250px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQalWG6R6tx_80vnQ0J1P104Do65iTkEz6YZ94HxkkjLQpqU8R4KJSta_MF-R7Suhfhdc8&usqp=CAU");
+  border-radius: 35px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.img3{
+  width: 300px;
+  height: 250px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_CyEsJ_7mMEy7jHkc0eHvyNOb3rqWKpfJm_cef6-xQGrXJQnrZzbwdnloLvG3HgzFvuQ&usqp=CAU");
+  border-radius: 35px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.img4{
+  width: 300px;
+  height: 250px;
+  background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/99/23/0b/20180707-094330-hdr-largejpg.jpg?w=900&h=500&s=1");
+  border-radius: 35px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.img5{
+  width: 300px;
+  height: 250px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIBK1iRmxkpZC5MU2XltChOBmueJFwCqyG5A&s");
+  border-radius: 35px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.box + h5{
+  color: #B58C67;
+}
+
+h5 + a{
+  text-decoration: none;
+   color: #B58C67;
+  
+
+}
 
