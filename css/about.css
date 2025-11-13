@@ -1,4 +1,9 @@
-        /* Loading Screen Styles */
+     *{
+        box-sizing: border-box;
+      
+     }
+     
+     /* Loading Screen Styles */
         #loading-screen {
             position: fixed;
             top: 0;
