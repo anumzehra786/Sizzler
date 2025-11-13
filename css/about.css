@@ -3,6 +3,15 @@
         max-width: 100%;
      }
      
+
+       body {
+            background: #1e1e1e;
+            color: #ffffff;
+            font-family: "Poppins", sans-serif;
+            overflow-x: hidden;
+  width: 100%;
+        }
+
      /* Loading Screen Styles */
         #loading-screen {
             position: fixed;
@@ -66,7 +75,12 @@ header{
     max-width: 100%;
     height: 90px;
     background-color: black;
+       overflow: hidden;
 
+}
+
+nav ul li {
+ overflow: hidden;
 }
 
 nav ul li::after {
@@ -78,6 +92,7 @@ nav ul li::after {
   background: #E0562A;
 background: linear-gradient(90deg,rgba(224, 86, 42, 1) 0%, rgba(244, 171, 41, 1) 100%);
   transition: width ease .2s;
+   overflow: hidden;
 }
 
 nav ul li:hover::after {
@@ -89,7 +104,9 @@ nav ul li:hover::after {
     background-size: cover;
     background-position: center;
     height: 600px;
-    width: 100%;
+    
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .app{
@@ -146,13 +163,6 @@ nav ul li:hover::after {
   border-radius:10%;
 }
 
-  body {
-            background: #1e1e1e;
-            color: #ffffff;
-            font-family: "Poppins", sans-serif;
-            overflow-x: hidden;
-  width: 100%;
-        }
 
         .reserve-section {
             padding: 80px 0;
@@ -243,6 +253,7 @@ nav ul li:hover::after {
         footer p{
             transition: 0.3s;
             cursor: default;
+            overflow: hidden;
         }
 
         footer p:hover{
@@ -355,4 +366,48 @@ footer .box5:hover{
 .row{
     margin-left: 0 !important;
   margin-right: 0 !important;
+  overflow: hidden;
 }
+.container, .container-fluid, header, footer, section, div {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+
+
+
+@media (max-width: 1024px) {
+    header{
+        width: 100%;
+    }
+  .mvv {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .reserve-text h1 {
+    font-size: 28px;
+  }
+
+  footer .img {
+    justify-content: center;
+  }
+
+  .home {
+    height: 400px;
+  }
+
+  .fnt{
+    font-size: medium;
+  }
+}
+
+
+@media (max-width:600px){
+    .fnt{
+    font-size: xx-small;
+  }
+}
+
