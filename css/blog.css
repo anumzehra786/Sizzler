@@ -1,7 +1,365 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,900;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Meow+Script&family=Nunito:ital,wght@0,900;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&family=Sanchez:ital@0;1&family=Stack+Sans+Text:wght@218&display=swap');
 body{
     background-color: black;
+        
+       width: 100%;
+       overflow-x: hidden;
+     }
+     
+     /* Loading Screen Styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loading-container {
+            text-align: center;
+        }
+
+        h2{
+            font-size: 40px;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal
+        }
+
+        .loading-text {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: transparent;
+            background: linear-gradient(to top, #c9a96e 0%, #c9a96e 50%, rgba(255, 255, 255, 0.2) 50%);
+            background-size: 100% 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            position: relative;
+            animation: fillText 5s ease-in-out forwards;
+            letter-spacing: 2px;
+        }
+
+        @keyframes fillText {
+            0% {
+                background-position: 0% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        /* Main Website Styles */
+        .website-content {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-in 5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+
+header{
+    max-width: 100%;
+    height: 90px;
+    background-color: black;
+
 }
+
+nav ul li::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  margin-top: -5px;
+  background: #E0562A;
+background: linear-gradient(90deg,rgba(224, 86, 42, 1) 0%, rgba(244, 171, 41, 1) 100%);
+  transition: width ease .2s;
+}
+
+nav ul li:hover::after {
+ width:100%;
+}
+
+.home{
+    background:url(../images/Screenshot\ 2025-11-07\ 191059.png) ;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    width: 100%;
+}
+
+.app{
+    font-size: 15px;
+    background-color: #C39771;
+    width: 200px;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0 100%, 7% 50%, 0 0);
+}
+
+.clr{
+    color: #C39771 !important;
+}
+
+.mvv{
+  margin-top: 50px;
+  background-color: rgba(72, 71, 71, 0.3);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  border-radius: 50px;
+  justify-content: space-around;
+  align-items: center;
+}
+.circle{
+  width: 5px;
+  height: 5px;
+  background-color: #C39771;
+  border-radius: 100%;
+}
+
+.hclr{
+  transition: 0.2s;
+}
+
+.hclr:hover{
+  color: #C39771 !important;
+}
+
+.fnt{
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.fnt-top{
+  font-size: 25px;
+}
+
+.fnt-h1{
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.img{
+  border-radius:10%;
+}
+
+  body {
+            background: #1e1e1e;
+            color: #ffffff;
+            font-family: "Poppins", sans-serif;
+            overflow-x: hidden;
+  width: 100%;
+        }
+
+        .reserve-section {
+            padding: 80px 0;
+        }
+
+        .reserve-text h5 {
+            color: #B58C67;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+        .reserve-text h1 {
+            font-weight: 700;
+            font-size: 35px;
+            line-height: 1.3;
+        }
+
+        .reserve-text h1 span {
+            color:#B58C67;
+        }
+
+        .reserve-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.08);
+             max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+        }
+
+        .btn-reserve {
+            background: #B58C67;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 30px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+
+ footer{
+    max-width: 100%;
+    /* height: 400px; */
+ background: #191919;
+ /* padding: 60px 0; */
+
+        }
+
+ footer i{
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 50%;
+        background-color: transparent;
+            margin-right: 10px;
+            cursor: pointer;
+            box-sizing: content-box;
+            border: 1px solid #B58C67;
+            transition: 0.5s;
+        }
+
+        footer i:hover{
+            /* transform: scale(1); */
+            color: #191919;
+            background-color: #B58C67;
+            box-shadow: 0px 0px 10px #B58C67;
+        }
+
+        footer h4{
+                font-size: 20px;
+    line-height: 23px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    cursor: default;
+        }
+.logo{
+    transition: 0.3s;
+}
+
+.logo:hover{
+    transform: scale(1.05);
+}
+
+        footer p{
+            transition: 0.3s;
+            cursor: default;
+        }
+
+        footer p:hover{
+            color: #B58C67;
+
+        }
+        footer h4:hover{
+            color: #B58C67;
+
+        }
+
+
+footer .img{
+    width: 280px;
+    height: 190px;
+    /* margin-left: 33px; */
+    display: flex;
+  
+   
+  justify-content: space-around;
+}
+
+
+
+footer .box{
+    width: 83px;
+    height: 83px;
+    /* background-color: aqua; */
+    border-radius: 10px;
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+    background-image: url("https://savory.qodeinteractive.com/wp-content/uploads/2024/03/savory-n-instagram-img-6-200x200.jpg");
+}
+
+footer .box:hover{
+    transform: scale(1.1);
+}
+footer .box1{
+    width: 83px;
+    height: 83px;
+    border-radius: 10px;
+transition: 0.3s;
+    /* background-color: aqua; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://savory.qodeinteractive.com/wp-content/uploads/2024/03/savory-n-instagram-img-3-200x200.jpg");
+}
+
+footer .box1:hover{
+    transform: scale(1.1);
+}
+footer .box2{
+    width: 83px;
+    height: 83px;
+    border-radius: 10px;
+transition: 0.3s;
+    /* background-color: aqua; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://savory.qodeinteractive.com/wp-content/uploads/2024/03/savory-n-instagram-img-4-200x200.jpg");
+}
+
+footer .box2:hover{
+    transform: scale(1.1);
+}
+footer .box3{
+    width: 83px;
+    height: 83px;
+    /* background-color: aqua; */
+    border-radius: 10px;
+    transition: 0.3s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://savory.qodeinteractive.com/wp-content/uploads/2024/03/savory-n-instagram-img-2-200x200.jpg");
+}
+
+footer .box3:hover{
+    transform: scale(1.1);
+}
+footer .box4{
+    width: 83px;
+    height: 83px;
+    /* background-color: aqua; */
+    background-size: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+    background-repeat: no-repeat;
+    background-image: url("https://savory.qodeinteractive.com/wp-content/uploads/2024/03/savory-n-instagram-img-1-200x200.jpg");
+}
+
+footer .box4:hover{
+    transform: scale(1.1);
+}
+footer .box5{
+    width: 83px;
+    border-radius: 10px;
+    height: 83px;
+    transition: 0.3s;
+    /* background-color: aqua; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://savory.qodeinteractive.com/wp-content/uploads/2024/03/savory-n-instagram-img-5-200x200.jpg");
+}
+footer .box5:hover{
+    transform: scale(1.1);
+}
+
+.row{
+    margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 .container{
   /* border: 2px solid red; */
 }
