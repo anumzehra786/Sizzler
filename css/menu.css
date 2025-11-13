@@ -1,3 +1,10 @@
+        body{
+    
+        
+       width: 100%;
+       overflow-x: hidden;
+     }
+        
         /* Loading Screen Styles */
         #loading-screen {
             position: fixed;
