@@ -1,6 +1,4 @@
        body{
-    
-        
        width: 100%;
        overflow-x: hidden;
      }
@@ -86,14 +84,14 @@ nav ul li:hover::after {
 }
 
 .home{
-    background:url("https://i.pinimg.com/736x/bf/bc/ed/bfbcedee5c1fc06294a4408c2548c805.jpg");
+    background:url("../images/WhatsApp Image 2025-11-14 at 09.33.51_9d3b5414.jpg");
     background-size: cover;
     background-position: center;
     height: 600px;
     width: 100%;
 }
 
-.box{
+.box-1{
   height: 600px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.651);
@@ -127,10 +125,10 @@ nav ul li:hover::after {
   padding: 0 3rem;
 }
 
-.gallery-grid img {
+.gallery-grid img{
   width: 100%;
   border-radius: 10px;
-  transition: transform 0.4s, box-shadow 0.4s;
+  transition:  0.4s, ;
   cursor: pointer;
 }
 
@@ -291,7 +289,7 @@ footer .box5:hover{
     transform: scale(1.1);
 }
 
-.container, .container-fluid, header, footer, section, div {
+ header, footer {
   max-width: 100%;
   overflow: hidden;
 }
