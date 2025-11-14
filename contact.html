@@ -7,7 +7,7 @@
     <link rel="icon" href="images/sizzler-logo.png">
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
     <!-- Icons -->
@@ -81,31 +81,27 @@
         }
 
       
-        /* Navbar */
-        .navbar {
-            background: #1b1b1b;
-            padding: 15px 0;
-        }
+header{
+    max-width: 100%;
+    height: 90px;
 
-        .navbar-brand {
-            font-size: 22px;
-            font-weight: 600;
-            color: #e7e4c3 !important;
-        }
+}
 
-        .nav-link {
-            color: #ffffff !important;
-            margin: 0 10px;
-        }
+nav ul li::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  margin-top: -5px;
+  background: #E0562A;
+background: linear-gradient(90deg,rgba(224, 86, 42, 1) 0%, rgba(244, 171, 41, 1) 100%);
+  transition: width ease .2s;
+}
 
-        .book-btn {
-            background: #B58C67;
-            color: white;
-            border-radius: 20px;
-            padding: 7px 18px !important;
-            font-weight: 600;
-            transition: 0.3s;
-        }
+nav ul li:hover::after {
+ width:100%;
+}
+
 
         /* Hero Section */
         .hero {
@@ -387,7 +383,7 @@ footer .box5:hover{
 
     <div class="website-content">
 <!-- NAVBAR -->
-   <header class="position-fixed w-100 z-3">
+<header class="position-fixed w-100 z-3">
   <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #000000da;">
             <div class="container">
                 <a class="navbar-brand" href="#">
@@ -607,7 +603,7 @@ footer .box5:hover{
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 <!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 <script>
       setTimeout(function() {
             const loadingScreen = document.getElementById('loading-screen');
