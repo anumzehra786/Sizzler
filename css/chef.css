@@ -85,8 +85,8 @@ nav ul li:hover::after {
  width:100%;
 }
 
-.home{
-    background:url("https://i.pinimg.com/1200x/c2/e0/a0/c2e0a0038c541165e3dc2ca2b15c5db9.jpg");
+.home{   
+     background:url("../images/WhatsApp\ Image\ 2025-11-14\ at\ 09.31.01_92090dfd.jpg");
     background-size: cover;
     background-position: center;
     height: 600px;
