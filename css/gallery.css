@@ -289,8 +289,4 @@ footer .box5:hover{
     transform: scale(1.1);
 }
 
- header, footer {
-  max-width: 100%;
-  overflow: hidden;
-}
 
